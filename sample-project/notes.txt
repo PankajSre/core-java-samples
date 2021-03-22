@@ -1,0 +1,148 @@
+ArrayList
+LinkedList
+
+
+How to Iterate the Collection Object
+=====================================
+
+we can iterate the Collection in the below 2 ways:
+
+1. By using enhanced for loop
+   
+   
+		for(Object obj : list) {
+			System.out.println(obj);
+		}
+		
+2. By Using Iterator interface:
+     This interface is inside java.util package. It is used to iterate through the collection objects.
+	 
+	 To create a reference of this interface, we will use the iterate() method form the Iterable interface
+	 
+	 Iterator it = list.iterator();
+	 
+	 This interface have 3 methods:
+	 
+	 1. public boolean hasNext()
+	        It is used to check for the next element in the collection object, if object available it returns true otherwise false.
+	 2. public Object next()
+	         if hasNext() returns true, then the control will go inside the block and next() method will fetch the object from the collection.
+	 3. public void remove()
+	      It is used to remove the Object.
+
+This interface is forward only ======> 
+
+
+To traverse in forward as well as in backward direction we will use ListIterator interface.
+
+ListIterator interface:
+=======================
+It is also available in java.util package and moves in forward and backward direction.
+To create a reference of this , we will use listIterator() method.
+
+
+   ListIterator lit = list.listIterator();
+   
+   It has 5 methods:
+   
+   
+	 1. public boolean hasNext()
+	        It is used to check for the next element in the collection object, if object available it returns true otherwise false.
+	 2. public Object next()
+	         if hasNext() returns true, then the control will go inside the block and next() method will fetch the object from the collection.
+	 3. public void remove()
+	      It is used to remove the Object.
+		  
+	 4. public boolean hasPrevious():
+	      It is used to check for the previous element in the collection object, if object available it returns true otherwise false.
+		  
+	 5. public Object previous():
+	       if hasPrevious() returns true, then the control will go inside the block and previous() method will fetch the object from the collection.
+		   
+
+Generics in Java:
+================
+
+
+Set Interface:
+===============
+A set is a Collection that does not allow duplicate values. It contains methods from the Collection interface and restrict us to add duplicate elements.
+
+
+HashSet: It implements Set interface and does not allow duplicate values. It does not maintains the insertion order of the elements.
+
+ListIterator<String> lit = list.listIterator();
+ListIterator is not available for Set interface(HashSet, LinkedHashSet, TreeSet)
+
+
+LinkedHashSet: 
+    This is the child class of HashSet class and it maintains the insertion Order of the elements.
+
+TreeSet: It is implementing SortedSet interface which is the child interface of Set interface.
+It is used to sort the elements in the ascending order according to their ACSII code.
+
+
+
+Map interface:
+=============
+It is a collection that provides the functionality of the map data structure.
+
+Map is stored as the <Key,Value> pair. The keys are unique values associated with the individual values.
+
+A Map cannot contains duplicate keys, values can be duplicate. And each key is associated with a single value.
+
+All the classes and interfaces are there in java.util package.
+
+Key  Value
+personal_email   abc@gmail.com
+professional_email abc@cognizant.com
+
+us  United States
+in    India
+fr   France
+
+
+to store <K,V> pair in the map interface we use put(K,V) method. The <K,V> pair is called as the Entry.
+
+
+Map:
+   -- HashMap
+       It does not maintains the insertion order of the <K,V> pair.
+   -- LinkedHashMap
+       It is the child class of HashMap and maintains the insertion order of the <K,V> pair.
+   -- Hashtable
+   -- TreeMap
+   
+   
+ How To traverse the key and Value pair:
+ ---------------------------------------
+ We have Entry interface which is the child interface of the Map. It is used to retrieve an entry from the map. And then we can use getKey() and getValue() to retrieve the key or value.
+ 
+ entrySet():
+    Returns a Set view of the mappings contained in this map.
+	
+	
+Hashtable:
+==========
+ This class implements a hash table, which maps keys to the values.
+It is like a bucket. It stores non-null keys and non-null values only. To successfully store and retrieve Objects form the hashtable, the objects used as key must implement the hashCode() and equals() 
+
+It is synchronized.
+
+
+TreeMap:
+   It is used to sort the key value pair in the ascending order of the keys according to ACSII code.
+
+
+How to Sort List Collection???
+==============================
+
+so to sort List collection, we will use Collections class, which is also inside java.util package. It has static methods, from them sort() is used to sort the List.
+
+
+
+How to store Use defined Object in the Collection:
+==================================================
+1. create a Java class
+
+
